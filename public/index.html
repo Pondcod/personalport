@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/68307059a6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Logo.png" width="100" height="200" class="Logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#education">Educations</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            <i class="fa-solid fa-xmark"></i>
+            </ul>
+            <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="header-text">
+            <p>CPE 37 ID:66070503458</p>
+            <h1>Hi, I'm <span>Pond</span><br> From CPE 37</h1>
+        </div>
+    </div>
+</div>
+<!--------------about--------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.pdf">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Now I'am CPE KMUTT student and I have interest in computer programming</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Hobbies')">Hobbies</p>
+                </div>
+                <div class="tab-content" id="Experience">
+                    <ul>
+                        <li><span>2022-2023</span><br>c programming Web/App dev</li>
+                        <li><span>2021</span><br>Python/games</li>
+                        <li><span>2020</span><br>Start coding</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="Hobbies">
+                    <ul>
+                        <li><span>Music</span><br>Playing Saxophone 🎷</li>
+                        <li><span>Music</span><br>Producer 🎵</li> 
+                        <li><span>Sport</span><br>Swimming 🏊🏻</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--------------Skills--------------- -->
+<div id="Skills">
+    <div class="container">
+        <h1 class="sub-title">Skills</h1>
+        <div class="skill-list">
+            <div>
+                <i class="fa-solid fa-code"></i> 
+                <i class="fa-brands fa-figma"></i>
+                <h2>UX/UI Design</h2>
+                <p>I have a hands on web development using many tool and I want to improve myself and get to know more and make beautiful website and application.</p>
+            </div>
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <i class="fa-solid fa-c"></i>
+                <h2>C language/Python</h2>
+                <p>I have been througt this alot and for a past few months I gain alot logical thinking from this.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<! --------------education--------------- -->
+<div id="education">
+    <div class="container">
+        <h1 class="sub-title">Eduactions</h1>
+        <div class="education-list">
+            <div class="education">
+                <img src="images/atmosphere6.jpg">
+                <div class="layer">
+                    <h3>Sarasas Ektra School</h3>
+                    <p>Kindergarten (2008) - Grade 12 (2022) </p>
+                    <a href="https://www.ektra.ac.th"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="education">
+                <img src="images/kmutt-websitelogo-01-scaled.jpg">
+                <div class="layer">
+                    <h3>KMUTT</h3>
+                    <p>CPE KMUTT Fereshman year</p>
+                    <a href="https://www.kmutt.ac.th"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<! -- --------------contact--------------- -->
+
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>sumethchotana@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>086-3585-126</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message"rows="6" placeholder="Your Message"></textarea>
+                    <button type="button" class="btn">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p></p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-content");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbxfoUtxRPChLgo_nsgXEzQfENF5rYFIgJbYJ7C_bqF4JTiyYKU4oaXCUUzz2uFNOzl2VQ/exec>'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
